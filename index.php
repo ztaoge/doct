@@ -22,3 +22,4 @@ $userRepository = $em->getRepository('models\Entity\User');
 //$userRepository->test();
 
 
+$container = new \libraries\Container();
