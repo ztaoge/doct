@@ -16,3 +16,9 @@ var_dump($productRepository->getAllProduct());
 //$product->setName('产品1号');
 //$em->persist($product);
 //$em->flush();
+
+/** @var \models\Repository\UserRepository $userRepository */
+$userRepository = $em->getRepository('models\Entity\User');
+//$userRepository->test();
+
+
