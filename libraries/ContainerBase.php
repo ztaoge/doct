@@ -24,7 +24,7 @@ class ContainerBase implements \ArrayAccess
 
     public function offsetGet($offset)
     {
-        return new $this->container[$offset]();
+        return $this->container[$offset]();
     }
 
     public function offsetSet($offset, $value)

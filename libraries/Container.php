@@ -9,19 +9,32 @@ namespace libraries;
 
 class Container extends ContainerBase
 {
-    /** @var array $serviceArray 注册的服务 */
-    public static $serviceArray = [
-        'testService' => 'src\Services\TestService'
-    ];
+    /** @var  object $app */
+    public $app;
 
     public function __construct($array = [])
     {
         parent::__construct($array);
-        $this->container = self::$serviceArray;
+        $this->init();
     }
 
-    public function index()
+    private function init()
     {
-        return $this->container;
+        $this['memcached'] = function () {
+            return '';
+        };
+
+        $this['redis'] = function() {
+            /** @var \Redis $redis */
+            $redis = new \Redis();
+            return $redis;
+        };
+
+        $this['testService'] = function () {
+            return new \src\Services\TestService();
+        };
+
     }
+
+
 }

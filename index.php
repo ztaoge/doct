@@ -10,7 +10,7 @@ $em = require_once "bootstrap.php";
 
 /** @var \models\Repository\ProductRepository $productRepository */
 $productRepository = $em->getRepository('models\Entity\Product');
-var_dump($productRepository->getAllProduct());
+//var_dump($productRepository->getAllProduct());
 
 //$product = new models\Entity\Product();
 //$product->setName('产品1号');
@@ -23,5 +23,16 @@ $userRepository = $em->getRepository('models\Entity\User');
 
 /** @var \libraries\Container $container */
 $container = new \libraries\Container();
-var_dump($container->index());
-var_dump($container['testService']);
+/** @var \src\Services\TestService $testService */
+$testService = $container['testService'];
+echo $testService->test();
+
+
+
+
+
+
+
+
+
+
