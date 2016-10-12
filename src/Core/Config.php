@@ -15,4 +15,5 @@ class Config
     public function load()
     {
     }
+
 }
