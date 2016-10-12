@@ -25,7 +25,7 @@ $userRepository = $em->getRepository('models\Entity\User');
 $container = new \libraries\Container();
 /** @var \src\Services\TestService $testService */
 $testService = $container['testService'];
-echo $testService->test();
+var_dump($testService->test());
 
 
 

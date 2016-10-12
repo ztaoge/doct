@@ -9,11 +9,7 @@ namespace src\Services;
 
 class TestService extends Service
 {
-    public function __construct()
-    {
-    }
-
     public function test() {
-        return 'test';
+        return $this->container;
     }
 }

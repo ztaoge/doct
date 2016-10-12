@@ -6,10 +6,14 @@
  * Time: 19:16
  */
 namespace src\Services;
+use libraries\Container;
 
 class Service
 {
-    public function __construct()
+    protected $container;
+
+    public function __construct(Container $container)
     {
+        $this->container = $container;
     }
 }
