@@ -9,6 +9,7 @@ namespace libraries;
 
 class Container extends ContainerBase
 {
+    /** @var array $serviceArray 注册的服务 */
     public static $serviceArray = [
         'testService' => 'src\Services\TestService'
     ];
