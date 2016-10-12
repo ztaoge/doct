@@ -10,12 +10,17 @@ namespace libraries;
 class Container extends ContainerBase
 {
     public static $serviceArray = [
-        'testService'
+        'testService' => 'src\Services\TestService'
     ];
 
-    public function __construct(array $array)
+    public function __construct($array = [])
     {
         parent::__construct($array);
         $this->container = self::$serviceArray;
+    }
+
+    public function index()
+    {
+        return $this->container;
     }
 }

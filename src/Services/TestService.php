@@ -5,13 +5,12 @@
  * Date: 16/10/11
  * Time: 20:07
  */
-namespace src;
+namespace src\Services;
 
 class TestService extends Service
 {
-    public function __construct(\libraries\Container $container)
+    public function __construct()
     {
-        parent::__construct($container);
     }
 
     public function test() {

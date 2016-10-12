@@ -25,7 +25,7 @@ class ContainerBase implements \ArrayAccess
     public function offsetGet($offset)
     {
         //return isset($this->container[$offset]) ? $this->container[$offset] : null;
-        return new $offset;
+        return new $this->container[$offset]();
     }
 
     public function offsetSet($offset, $value)
@@ -47,8 +47,4 @@ class ContainerBase implements \ArrayAccess
         echo __CLASS__;
     }
 }
-
-$container = new ContainerBase(['a' => 1, 'b' => 2, 'c' => 3]);
-
-echo $container['a'];
 

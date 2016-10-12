@@ -21,5 +21,7 @@ var_dump($productRepository->getAllProduct());
 $userRepository = $em->getRepository('models\Entity\User');
 //$userRepository->test();
 
-
+/** @var \libraries\Container $container */
 $container = new \libraries\Container();
+var_dump($container->index());
+var_dump($container['testService']);

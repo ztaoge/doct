@@ -5,15 +5,11 @@
  * Date: 16/10/11
  * Time: 19:16
  */
-namespace src;
+namespace src\Services;
 
 class Service
 {
-    /** @var  \libraries\ContainerBase $container */
-    protected $container;
-
-    public function __construct(\libraries\Container $container)
+    public function __construct()
     {
-        $this->container = $container;
     }
 }
