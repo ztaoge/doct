@@ -2,12 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: zhangjt
- * Date: 16/10/12
- * Time: 20:27
+ * Date: 16/10/14
+ * Time: 18:41
  */
 
-class App
+require_once('src/Core/BaseApp.php');
+
+class App extends \APP\BaseApp
 {
-    /** @var  \app\Application $app the application instance*/
-    public static $app;
 }
+
+spl_autoload_register(['App', 'autoload'], true, true);
+App::$classMap = require_once('src/Core/classes.php');
+App::$container = new \libraries\Container();
+

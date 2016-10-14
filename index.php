@@ -5,8 +5,8 @@
  * Date: 16/10/9
  * Time: 15:43
  */
-
-$em = require_once "bootstrap.php";
+require_once("src/Core/App.php");
+$em = require_once("bootstrap.php");
 
 /** @var \models\Repository\ProductRepository $productRepository */
 $productRepository = $em->getRepository('models\Entity\Product');
