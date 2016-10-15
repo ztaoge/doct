@@ -9,7 +9,7 @@ namespace APP;
 
 define('APP_VERSION', '0.0.1');
 
-Class BaseApp
+Class AppBase
 {
     public static $classMap = [];
 

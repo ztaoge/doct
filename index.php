@@ -22,13 +22,15 @@ $userRepository = $em->getRepository('models\Entity\User');
 //$userRepository->test();
 
 /** @var \libraries\Container $container */
-$container = new \libraries\Container();
+$container = App::$container;
 /** @var \src\Services\TestService $testService */
 $testService = $container['testService'];
-var_dump($testService->test());
+$appService = App::$container['appService'];
+//var_dump($testService->test());
+var_dump($appService->test());
 
-
-
+//var_dump(App::$container);
+var_dump(App::getVersion());
 
 
 

@@ -20,7 +20,7 @@ $dbParams = [
     'host' => '127.0.0.1',
     'dbname' => 'doctrine',
     'user' => 'root',
-    'password' => ''
+    'password' => 'root'
 ];
 
 return $entityManager = EntityManager::create($dbParams, $config);

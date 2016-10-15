@@ -17,7 +17,7 @@ class Container extends ContainerBase
     public function __construct($array = [])
     {
         parent::__construct($array);
-        $this->instance = &$this;
+        $this->instance = \App::$container;
         $this->init();
     }
 
@@ -34,9 +34,12 @@ class Container extends ContainerBase
         };
 
         $this['testService'] = function () {
-            return new \src\Services\TestService($this->instance);
+            return new \src\Services\TestService();
         };
 
+        $this['appService'] = function () {
+            return new \src\Services\AppService();
+        };
     }
 
 
