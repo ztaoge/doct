@@ -6,7 +6,7 @@
  * Time: 18:59
  */
 
-namespace libraries;
+namespace src\Core;
 
 class ContainerBase implements \ArrayAccess
 {

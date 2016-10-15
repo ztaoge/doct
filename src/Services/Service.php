@@ -6,7 +6,6 @@
  * Time: 19:16
  */
 namespace src\Services;
-use libraries\Container;
 
 class Service
 {

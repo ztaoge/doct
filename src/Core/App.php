@@ -15,7 +15,7 @@ class App extends \APP\AppBase
 
 spl_autoload_register(['App', 'autoload'], true, true);
 App::$classMap = require_once('src/Core/classes.php');
-App::$container = new \libraries\Container();
+App::$container = new \src\Core\Container();
 App::$app = new App();
 
 

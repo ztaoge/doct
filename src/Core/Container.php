@@ -5,7 +5,7 @@
  * Date: 16/10/11
  * Time: 19:29
  */
-namespace libraries;
+namespace src\Core;
 
 class Container extends ContainerBase
 {
