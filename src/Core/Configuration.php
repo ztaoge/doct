@@ -5,7 +5,7 @@
  * Date: 16/10/12
  * Time: 10:48
  */
-class Config
+class Configuration
 {
 
     public function __construct()
